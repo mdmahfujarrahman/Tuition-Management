@@ -1,0 +1,93 @@
+.login {
+    .login__container {
+        display: flex;
+        flex-direction: row-reverse;
+        .login__container__left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2f2e41;
+            padding: 20px;
+            color: #fff;
+            .login__container__left__item {
+                h1 {
+                    font-size: 35px;
+                    font-weight: 700;
+                    margin-bottom: 50px;
+                }
+                .login__input {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    .login__input__item {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 50px;
+
+                        input {
+                            border: none;
+                            border-bottom: 1px solid #fff;
+                            outline: none;
+                            padding: 0 0 7px 3px;
+                            background-color: transparent;
+                        }
+                        input::placeholder {
+                            color: #fff;
+                            font-size: 20px;
+                        }
+
+                        ::-webkit-input-placeholder {
+                            display: inline-block;
+                            opacity: 0.2;
+                            transition: all 0.3s ease-in-out;
+                            padding-right: 0.15em;
+                            white-space: nowrap;
+                        }
+
+                        input:focus::-webkit-input-placeholder {
+                            -webkit-transform: translateY(-125%);
+                            font-size: 75%;
+                            opacity: 0.05;
+                        }
+                        input.imitatefocus::-webkit-input-placeholder {
+                            -webkit-transform: translateY(-125%);
+                            opacity: 0.05;
+                        }
+                        .password {
+                            position: absolute;
+                            top: 70%;
+                            right: 0;
+                        }
+                    }
+                    .login__button {
+                        margin-top: 50px;
+                        display: flex;
+                        justify-content: flex-end;
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            background: transparent;
+                            border: 2px solid #00b0ff;
+                            padding: 10px 15px;
+
+                            path {
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .login__container__right {
+            flex: 2;
+            height: 100vh;
+            width: 100%;
+            background: url("../../Asset/Loginbg.png") center;
+            background-size: cover;
+        }
+    }
+}
